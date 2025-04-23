@@ -1,0 +1,10 @@
+digraph "ER Diagram" {
+	Users [label=Users fillcolor=lightblue shape=box style=filled]
+	Channels [label=Channels fillcolor=lightgreen shape=box style=filled]
+	Messages [label=Messages fillcolor=lightcoral shape=box style=filled]
+	Users -> Channels [label="Member of (many-to-many)"]
+	Users -> Channels [label="Admin of (one-to-many)"]
+	Users -> Messages [label="Sends (one-to-many)"]
+	Messages -> Users [label="Recipient (optional, one-to-one)"]
+	Messages -> Channels [label="Belongs to (many-to-one)" constraint=false]
+}
