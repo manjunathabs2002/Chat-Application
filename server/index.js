@@ -17,7 +17,7 @@ const databaseURL = process.env.DATABASE_URL;
 
 app.use(
   cors({
-    origin: "https://superlative-sundae-d179f0.netlify.app" || [process.env.ORIGIN],
+    origin: "https://superlative-sundae-d179f0.netlify.app",
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     credentials: true, // to enable cookies
   })
